@@ -1,0 +1,292 @@
+body {
+	background-color: #3E4150;
+	margin: 20px;
+	padding: 0;
+}
+
+.flexbox-container {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.flexbox-item {
+	width: 300px;
+	margin: 10px; 
+	background-color: #1D1E22;
+	box-shadow: 0px 0px 20px #0E0E10;
+}
+
+.flexbox-item-1 {
+	min-height: 100px;
+}
+
+.earth {
+	width: 70px;
+	float: left;
+	padding: 20px;
+}
+
+.plannet {
+	width: 70px;
+	float: right;
+	padding: 20px;
+}
+
+.logo {
+	width: 90px;
+	position: absolute;
+	margin-top: 50px;
+}
+
+/*.line {
+	height: 0;
+	width: 100px;
+	border-style: dashed;
+	position: absolute;
+	color: #3998F8;
+}*/
+
+.spaceship {
+	width: 20px;
+	padding: 45px 0;
+
+	animation-name: ride;
+	animation-duration: 10s;
+	animation-timing-function: ease-in ;
+	animation-iteration-count: 1;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes ride {
+	from {transform: translateX(0px);}
+	to {transform: translateX(90px);}
+}
+
+
+.flexbox-item-2 {
+	min-height: 200px;
+	padding: 20px;
+	width: 260px;
+	color: #3998F8;
+	font-family: 'Source Code Pro', ;
+	text-align: center;
+	font-size: 10px;
+}
+
+#chart_div svg > rect {  /*Achtergrond*/
+    fill: #1D1E22;
+}
+
+#chart_div text {		/*Tekst kleur*/
+    fill: white !important;
+}
+
+.flexbox-item-3 {
+	min-height: 250px;
+	padding: 20px;
+	width: 260px;
+	color: white;
+	font-family: 'Source Code Pro', ;
+	text-align: center;
+	font-size: 10px;
+}
+
+.flexbox-item-3 h1 {
+	font-size: 20px;
+	color: #3998F8;
+
+}
+
+
+#chart2_div text {		/*Tekst kleur*/
+    fill: #1D1E22 !important;
+}
+
+
+#barchart_values {
+	width: 100px; 
+	height: 100px;
+}
+
+.flexbox-item-4 {
+	min-height: 250px;
+	padding: 20px;
+	width: 260px;
+	color: #3998F8;
+	font-family: 'Source Code Pro', ;
+	text-align: center;
+	font-size: 10px;
+}
+
+#barchart_values text {		/*Tekst kleur*/
+    fill: white !important;
+}
+
+#barchart_values svg > rect {  /*Achtergrond*/
+    fill: #1D1E22;
+}
+
+.spaceshipGroot {
+	display: none;
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 657px) {
+	.flexbox-item-1 {
+		width: 620px
+	}
+
+	.spaceship {
+		animation-name: ride;
+		animation-duration: 60s;
+		animation-iteration-count: 1;
+		animation-delay: 1s;
+		animation-fill-mode: forwards;
+
+	}
+
+	@keyframes ride {
+		from {transform: translateX(0px);}
+		to {transform: translateX(410px);}
+	}
+
+	.logo {
+		width: 200px;
+		position: absolute;
+		margin-top: 40px;
+		margin-left: 120px;
+	}
+
+	.grid-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+
+	.flexbox-item-3 {
+		grid-row: 1/3;
+		grid-column: 1/2;
+	}
+
+	#chart2_div {
+		padding-top: 100px;
+	}
+
+
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+	.spaceship {
+		animation-name: ride;
+		animation-duration: 80s;
+		animation-iteration-count: 1;
+		animation-delay: 1s;
+		animation-fill-mode: forwards;
+
+	}
+
+	@keyframes ride {
+		from {transform: translateX(0px);}
+		to {transform: translateX(760px);}
+	}
+
+	.logo {
+		width: 200px;
+		position: absolute;
+		margin-left: 10%;
+		margin-top: 40px;
+	}
+
+	.flexbox-container {
+		width: 70%;
+		margin: auto;
+	}
+
+	.grid-container {
+		justify-content: center;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+
+	.flexbox-item-1 {
+		width: 100%;
+		max-width: 939px;
+	}
+
+	.flexbox-item-2 {
+		grid-column: 2/3;
+	}
+
+	.flexbox-item-3 {
+		grid-column: 1/2;
+	}
+
+	.flexbox-item-4 {
+		grid-column: 2/3;
+	}
+
+}
+
+@media only screen and (min-width: 1305px) {
+
+	.flexbox-item-5 {
+		display: grid;
+		grid-column: 3/4;
+		grid-row: 1/3;
+		margin: 20px;
+		justify-content: space-around;
+	}
+
+	.spaceshipGroot {
+		display: flex;
+		height: 590px;
+	}
+
+	.grid-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+
+	.logo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 40px;
+		margin-left: 25%;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
